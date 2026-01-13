@@ -322,3 +322,40 @@ section:nth-child(5) { animation-delay: 0.8s; }
     color: #666;
     font-style: italic;
 }
+
+.seminars-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 25px;
+}
+
+.seminar-card {
+    background: white;
+    padding: 25px;
+    border-left: 4px solid var(--secondary);
+    border-radius: 4px;
+    box-shadow: 0 3px 15px rgba(0,0,0,0.06);
+    transition: transform 0.3s;
+}
+
+.seminar-card:hover {
+    transform: translateX(5px);
+}
+
+.seminar-title {
+    font-weight: 600;
+    color: var(--primary);
+    margin-bottom: 10px;
+}
+
+.seminar-date {
+    color: var(--secondary);
+    font-size: 0.9em;
+    font-weight: 500;
+}
+
+.seminar-organizer {
+    color: #666;
+    font-size: 0.9em;
+    margin-top: 5px;
+}

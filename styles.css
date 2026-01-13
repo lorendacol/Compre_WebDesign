@@ -468,4 +468,4 @@ section:nth-child(5) { animation-delay: 0.8s; }
 .project-links a:hover {
     background: var(--secondary);
     color: white;
-}
+} 

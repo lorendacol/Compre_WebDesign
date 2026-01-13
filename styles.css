@@ -268,3 +268,57 @@ section:nth-child(5) { animation-delay: 0.8s; }
 .skill-list li:last-child {
     border-bottom: none;
 }
+
+.timeline {
+    position: relative;
+    padding-left: 40px;
+}
+
+.timeline::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    width: 2px;
+    background: var(--secondary);
+}
+
+.timeline-item {
+    position: relative;
+    margin-bottom: 40px;
+    background: white;
+    padding: 25px;
+    border-radius: 8px;
+    box-shadow: 0 3px 15px rgba(0,0,0,0.06);
+}
+
+.timeline-item::before {
+    content: '';
+    position: absolute;
+    left: -48px;
+    top: 30px;
+    width: 16px;
+    height: 16px;
+    border-radius: 50%;
+    background: var(--secondary);
+    border: 3px solid var(--light);
+}
+
+.timeline-year {
+    color: var(--secondary);
+    font-weight: 600;
+    margin-bottom: 5px;
+}
+
+.timeline-title {
+    font-size: 1.2em;
+    font-weight: 600;
+    margin-bottom: 5px;
+    color: var(--primary);
+}
+
+.timeline-subtitle {
+    color: #666;
+    font-style: italic;
+}

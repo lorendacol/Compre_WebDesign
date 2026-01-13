@@ -1,0 +1,132 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --primary: #2c3e50;
+    --secondary: #c9a55a;
+    --accent: #1a1a1a;
+    --light: #a3b4c5;
+    --text: #333;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background: var(--light);
+    color: var(--text);
+    line-height: 1.6;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+/* Info Bar */
+.info-bar {
+    background: var(--primary);
+    color: white;
+    padding: 40px 0;
+    position: relative;
+    overflow: hidden;
+}
+
+.info-bar::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 50%;
+    height: 100%;
+    background: var(--accent);
+    clip-path: polygon(20% 0, 100% 0, 100% 100%, 0% 100%);
+    opacity: 0.5;
+}
+
+.info-content {
+    position: relative;
+    z-index: 1;
+}
+
+.name {
+    font-size: 2.5em;
+    font-weight: 600;
+    letter-spacing: 2px;
+    margin-bottom: 10px;
+    font-family: 'Playfair Display', serif;
+}
+
+.title {
+    font-size: 1.2em;
+    color: var(--secondary);
+    font-weight: 300;
+    margin-bottom: 20px;
+}
+
+.contact-info {
+    display: flex;
+    gap: 30px;
+    flex-wrap: wrap;
+    font-size: 0.95em;
+}
+
+.contact-info span {
+    opacity: 0.9;
+}
+
+/* Navigation */
+nav {
+    background: linear-gradient(135deg, #1a252f 0%, #2c3e50 50%, #eef0f3 100%);
+    box-shadow: 0 4px 20px rgba(168, 159, 159, 0.15);
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    backdrop-filter: blur(10px);
+    border-bottom: 1px solid rgba(201, 165, 90, 0.2);
+}
+
+nav ul {
+    display: flex;
+    justify-content: center;
+    gap: 50px;
+    list-style: none;
+    padding: 25px 0;
+}
+
+nav a {
+    color: #ffffff;
+    text-decoration: none;
+    font-weight: 500;
+    font-size: 0.9em;
+    position: relative;
+    transition: all 0.3s ease;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    font-family: 'Poppins', sans-serif;
+}
+
+nav a::after {
+    content: '';
+    position: absolute;
+    bottom: -8px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 0;
+    height: 3px;
+    background: var(--secondary);
+    transition: width 0.3s ease;
+    border-radius: 2px;
+    box-shadow: 0 0 10px var(--secondary);
+}
+
+nav a:hover {
+    color: var(--secondary);
+    transform: translateY(-2px);
+}
+
+nav a:hover::after {
+    width: 100%;
+}

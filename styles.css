@@ -415,3 +415,57 @@ section:nth-child(5) { animation-delay: 0.8s; }
         margin: 0 auto;
     }
 }
+
+.projects-list {
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+}
+
+.project-item {
+    background: white;
+    padding: 30px;
+    border-left: 4px solid var(--secondary);
+    border-radius: 4px;
+    box-shadow: 0 3px 15px rgba(0,0,0,0.06);
+    transition: transform 0.3s;
+}
+
+.project-item:hover {
+    transform: translateX(5px);
+}
+
+.project-name {
+    font-size: 1.3em;
+    font-weight: 600;
+    color: var(--primary);
+    margin-bottom: 10px;
+}
+
+.project-desc {
+    color: #666;
+    margin-bottom: 15px;
+    line-height: 1.6;
+}
+
+.project-links {
+    display: flex;
+    gap: 15px;
+    flex-wrap: wrap;
+}
+
+.project-links a {
+    color: var(--secondary);
+    text-decoration: none;
+    font-weight: 500;
+    padding: 8px 16px;
+    border: 1px solid var(--secondary);
+    border-radius: 4px;
+    transition: all 0.3s;
+    font-size: 0.9em;
+}
+
+.project-links a:hover {
+    background: var(--secondary);
+    color: white;
+}

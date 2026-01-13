@@ -359,3 +359,47 @@ section:nth-child(5) { animation-delay: 0.8s; }
     font-size: 0.9em;
     margin-top: 5px;
 }
+
+@media (max-width: 768px) {
+    .name {
+        font-size: 1.8em;
+    }
+
+    nav ul {
+        gap: 20px;
+        padding: 15px 0;
+    }
+
+    nav a {
+        font-size: 0.85em;
+    }
+
+    section {
+        padding: 50px 0;
+    }
+
+    .section-title {
+        font-size: 1.6em;
+    }
+
+    .contact-info {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .about-content {
+        grid-template-columns: 1fr;
+        gap: 30px;
+    }
+
+    .about-image-container {
+        position: relative;
+        top: 0;
+    }
+
+    .about-image {
+        width: 250px;
+        height: 250px;
+        margin: 0 auto;
+    }
+}
